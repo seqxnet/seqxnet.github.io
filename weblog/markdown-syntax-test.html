@@ -112,77 +112,77 @@
 <p>Here's some <code>inline code</code> in a sentence.</p>
 <p>You can also use <code>variable_names</code> and <code>function_calls()</code> inline.</p>
 <h3>Fenced Code Blocks</h3>
-<pre class="codehilite"><code>Plain code block without syntax highlighting
-This is useful for generic text output
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="nv">Plain</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">block</span><span class="w"> </span><span class="nv">without</span><span class="w"> </span><span class="nv">syntax</span><span class="w"> </span><span class="nv">highlighting</span>
+<span class="nv">This</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">useful</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">generic</span><span class="w"> </span><span class="nv">text</span><span class="w"> </span><span class="nv">output</span>
+</code></pre></div>
 
-<pre class="codehilite"><code class="language-bash"># Bash/Shell commands
-sudo apt update
-cd /home/user
-ls -la | grep &quot;*.txt&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Bash/Shell commands</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+<span class="nb">cd</span><span class="w"> </span>/home/user
+ls<span class="w"> </span>-la<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span>
+</code></pre></div>
 
-<pre class="codehilite"><code class="language-python"># Python code with syntax highlighting
-def fibonacci(n):
-    &quot;&quot;&quot;Generate fibonacci sequence up to n terms.&quot;&quot;&quot;
-    a, b = 0, 1
-    for _ in range(n):
-        print(a, end=' ')
-        a, b = b, a + b
-    print()
+<div class="codehilite"><pre><span></span><code><span class="c1"># Python code with syntax highlighting</span>
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate fibonacci sequence up to n terms.&quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nb">print</span><span class="p">()</span>
 
-# Usage
-fibonacci(10)
-</code></pre>
+<span class="c1"># Usage</span>
+<span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
 
-<pre class="codehilite"><code class="language-javascript">// JavaScript example
-const greetUser = (name, age) =&gt; {
-    if (age &gt;= 18) {
-        console.log(`Hello ${name}, you're an adult!`);
-    } else {
-        console.log(`Hi ${name}, you're still young!`);
-    }
-};
+<div class="codehilite"><pre><span></span><code><span class="c1">// JavaScript example</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">greetUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">, you&#39;re an adult!`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hi </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">, you&#39;re still young!`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
 
-greetUser(&quot;Alice&quot;, 25);
-</code></pre>
+<span class="nx">greetUser</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
+</code></pre></div>
 
-<pre class="codehilite"><code class="language-json">{
-    &quot;name&quot;: &quot;markdown-test&quot;,
-    &quot;version&quot;: &quot;1.0.0&quot;,
-    &quot;description&quot;: &quot;Testing all markdown syntax&quot;,
-    &quot;features&quot;: [
-        &quot;headers&quot;,
-        &quot;lists&quot;, 
-        &quot;code blocks&quot;,
-        &quot;tables&quot;
-    ],
-    &quot;active&quot;: true
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;markdown-test&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Testing all markdown syntax&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;headers&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;lists&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s2">&quot;code blocks&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;tables&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
 
-<pre class="codehilite"><code class="language-yaml"># YAML configuration example
-version: '3.8'
-services:
-  web:
-    image: nginx:alpine
-    ports:
-      - &quot;80:80&quot;
-    environment:
-      - ENV=production
-    volumes:
-      - ./html:/usr/share/nginx/html:ro
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c1"># YAML configuration example</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENV=production</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./html:/usr/share/nginx/html:ro</span>
+</code></pre></div>
 
-<pre class="codehilite"><code class="language-sql">-- SQL query example
-SELECT u.name, u.email, COUNT(p.id) as post_count
-FROM users u
-LEFT JOIN posts p ON u.id = p.user_id
-WHERE u.active = true
-GROUP BY u.id, u.name, u.email
-ORDER BY post_count DESC
-LIMIT 10;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c1">-- SQL query example</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">post_count</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="n">u</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">posts</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">user_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">active</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">email</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">post_count</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
 
 <h2>Tables</h2>
 <h3>Basic Table</h3>
