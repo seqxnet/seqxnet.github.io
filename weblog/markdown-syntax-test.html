@@ -101,12 +101,12 @@
 <p><a href="https://example.com">Basic link</a></p>
 <p><a href="https://example.com" title="This is a title">Link with title</a></p>
 <p><a href="https://example.com">https://example.com</a> - Automatic link</p>
-<p><a href="https://example.com" title="Reference link example">Reference-style link</a></p>
+<p>[Reference-style link][1]</p>
 <p><a href="./building-a-homelab-with-docker-swarm.md">Relative link to another post</a></p>
 <h3>Images</h3>
-<p><img alt="Alt text" src="https://via.placeholder.com/300x200/4a90e2/ffffff?text=Sample+Image" /></p>
-<p><img alt="Image with title" src="https://via.placeholder.com/400x250/7b68ee/ffffff?text=Image+with+Title" title="This is the image title" /></p>
-<p><a href="https://example.com"><img alt="Linked image" src="https://via.placeholder.com/200x150/ff6b6b/ffffff?text=Clickable" /></a></p>
+<p><img alt="Alt text" src="https://placehold.co/300x200/4a90e2/ffffff?text=Sample+Image" /></p>
+<p><img alt="Image with title" src="https://placehold.co/400x250/7b68ee/ffffff?text=Image+with+Title" title="This is the image title" /></p>
+<p><a href="https://example.com"><img alt="Linked image" src="https://placehold.co/200x150/ff6b6b/ffffff?text=Clickable" /></a></p>
 <h2>Code Blocks</h2>
 <h3>Inline Code</h3>
 <p>Here's some <code>inline code</code> in a sentence.</p>
@@ -114,12 +114,6 @@
 <h3>Fenced Code Blocks</h3>
 <pre class="codehilite"><code>Plain code block without syntax highlighting
 This is useful for generic text output
-</code></pre>
-
-<pre class="codehilite"><code class="language-bash"># Bash/Shell commands
-sudo apt update
-cd /home/user
-ls -la | grep &quot;*.txt&quot;
 </code></pre>
 
 <pre class="codehilite"><code class="language-python"># Python code with syntax highlighting
@@ -133,55 +127,6 @@ def fibonacci(n):
 
 # Usage
 fibonacci(10)
-</code></pre>
-
-<pre class="codehilite"><code class="language-javascript">// JavaScript example
-const greetUser = (name, age) =&gt; {
-    if (age &gt;= 18) {
-        console.log(`Hello ${name}, you're an adult!`);
-    } else {
-        console.log(`Hi ${name}, you're still young!`);
-    }
-};
-
-greetUser(&quot;Alice&quot;, 25);
-</code></pre>
-
-<pre class="codehilite"><code class="language-json">{
-    &quot;name&quot;: &quot;markdown-test&quot;,
-    &quot;version&quot;: &quot;1.0.0&quot;,
-    &quot;description&quot;: &quot;Testing all markdown syntax&quot;,
-    &quot;features&quot;: [
-        &quot;headers&quot;,
-        &quot;lists&quot;, 
-        &quot;code blocks&quot;,
-        &quot;tables&quot;
-    ],
-    &quot;active&quot;: true
-}
-</code></pre>
-
-<pre class="codehilite"><code class="language-yaml"># YAML configuration example
-version: '3.8'
-services:
-  web:
-    image: nginx:alpine
-    ports:
-      - &quot;80:80&quot;
-    environment:
-      - ENV=production
-    volumes:
-      - ./html:/usr/share/nginx/html:ro
-</code></pre>
-
-<pre class="codehilite"><code class="language-sql">-- SQL query example
-SELECT u.name, u.email, COUNT(p.id) as post_count
-FROM users u
-LEFT JOIN posts p ON u.id = p.user_id
-WHERE u.active = true
-GROUP BY u.id, u.name, u.email
-ORDER BY post_count DESC
-LIMIT 10;
 </code></pre>
 
 <h2>Tables</h2>
@@ -234,49 +179,6 @@ LIMIT 10;
 </tr>
 </tbody>
 </table>
-<h3>Complex Table</h3>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Basic Plan</th>
-<th>Pro Plan</th>
-<th>Enterprise</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Storage</strong></td>
-<td>1GB</td>
-<td>100GB</td>
-<td>Unlimited</td>
-</tr>
-<tr>
-<td><strong>Users</strong></td>
-<td>1</td>
-<td>10</td>
-<td>Unlimited</td>
-</tr>
-<tr>
-<td><strong>Support</strong></td>
-<td>Email</td>
-<td>Priority</td>
-<td>24/7 Phone</td>
-</tr>
-<tr>
-<td><strong>Price</strong></td>
-<td>Free</td>
-<td>$9.99/mo</td>
-<td>Contact Sales</td>
-</tr>
-<tr>
-<td><strong>API Access</strong></td>
-<td>❌</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-</tbody>
-</table>
 <h2>Blockquotes</h2>
 <blockquote>
 <p>This is a simple blockquote.</p>
@@ -299,10 +201,6 @@ Each line starts with a greater-than symbol.</p>
 </blockquote>
 <h2>Horizontal Rules</h2>
 <p>Three or more hyphens:</p>
-<hr />
-<p>Three or more asterisks:</p>
-<hr />
-<p>Three or more underscores:</p>
 <hr />
 <h2>Line Breaks and Paragraphs</h2>
 <p>This is a paragraph. To create a new paragraph, leave a blank line.</p>
@@ -348,61 +246,14 @@ You can put any markdown content here:
 </dl>
 <p>It can contain other markdown elements like <strong>bold text</strong> and <code>code</code>.</p>
 <h2>Footnotes</h2>
-<p>Here's a sentence with a footnote<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
-<p>Another sentence with a footnote<sup id="fnref:note"><a class="footnote-ref" href="#fn:note">2</a></sup>.</p>
+<p>Here's a sentence with a footnote[^1].</p>
+<p>Another sentence with a footnote[^note].</p>
 <p>You can also use inline footnotes^[This is an inline footnote].</p>
 <h2>Abbreviations</h2>
 <p><abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are fundamental web technologies. <abbr title="JavaScript">JS</abbr> adds interactivity.</p>
-<h2>Math (if supported)</h2>
-<p>Inline math: $E = mc^2$</p>
-<p>Block math:</p>
-<p>$$
-\sum_{i=1}^{n} x_i = x_1 + x_2 + \cdots + x_n
-$$</p>
-<h2>Emojis</h2>
-<p>You can use Unicode emojis directly: 🚀 💻 📝 ✅ ❌ 🎉</p>
-<p>Or use emoji shortcodes (if supported): :rocket: :computer: :memo:</p>
-<h2>Special Characters and Symbols</h2>
-<p>Copyright © symbol, trademark ™ symbol, registered ® symbol.</p>
-<p>Mathematical symbols: ± × ÷ ≠ ≤ ≥ ∞ π α β γ δ</p>
-<p>Arrows: → ← ↑ ↓ ↔ ⇒ ⇐ ⇔</p>
-<p>Currency: $ € £ ¥ ₹</p>
-<h2>Advanced Features</h2>
 <h3>Keyboard Keys</h3>
 <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
 <p>Use <kbd>Alt</kbd> + <kbd>Tab</kbd> to switch windows.</p>
-<h3>Highlighting</h3>
-<p>==This text is highlighted== (if supported by your markdown processor).</p>
-<h3>Subscript and Superscript</h3>
-<p>H~2~O is water.</p>
-<p>E = mc^2^ is Einstein's famous equation.</p>
-<h2>Comments</h2>
-<!-- This is a comment and won't be visible in the rendered output -->
-
-<p>You can use <abbr title="Hyper Text Markup Language">HTML</abbr> comments to add notes that won't appear in the final document.</p>
-<!-- 
-Multi-line comments
-work too
--->
-
-<h2>Conclusion</h2>
-<p>This document covers virtually every markdown syntax element you're likely to encounter. Use it as a reference when writing your own markdown documents!</p>
-<hr />
-<p><strong>Note</strong>: Some advanced features like math equations, footnotes, and highlighting may require specific markdown processors or extensions to work properly.</p>
-<p><em>Last updated: September 27, 2025</em></p>
-<!-- Reference links -->
-<!-- Footnotes -->
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>This is a footnote with a number.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:note">
-<p>This is a footnote with a custom identifier.&#160;<a class="footnote-backref" href="#fnref:note" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
     </div>
 
     <div class="back-link">
