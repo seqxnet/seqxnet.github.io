@@ -1,6 +1,6 @@
 body {
     background-color: #000000;
-    color: #e5e5e5;
+    color: #fcfcfc;
     font-family: "Courier New", monospace;
     font-size: 16px;
     line-height: 1.6;
@@ -43,13 +43,13 @@ body {
 
 .nav a {
     margin: 0 20px;
-    color: #e5e5e5;
+    color: #fcfcfc;
     text-decoration: none;
 }
 
 .nav a:hover {
     color: #000000;
-    background-color: #e5e5e5;
+    background-color: #fcfcfc;
 }
 
 .post-header {
@@ -293,13 +293,13 @@ body {
 }
 
 .back-link a {
-    color: #e5e5e5;
+    color: #fcfcfc;
     text-decoration: none;
 }
 
 .back-link a:hover {
     color: #000000;
-    background-color: #e5e5e5;
+    background-color: #fcfcfc;
 }
 
 .post-entry {
@@ -319,13 +319,13 @@ body {
 }
 
 .post-entry .post-title a {
-    color: #e5e5e5;
+    color: #fcfcfc;
     text-decoration: none;
 }
 
 .post-entry .post-title a:hover {
     color: #000000;
-    background-color: #e5e5e5;
+    background-color: #fcfcfc;
 }
 
 @media (max-width: 600px) {
